@@ -1,0 +1,160 @@
+.jumbotron {
+  margin-top: 80px; /* Sesuaikan nilai ini dengan tinggi navbar */
+  background-color: #f9efe3;
+}
+
+#Projects {
+  background-color: #e4c597;
+  margin-top: 100px;
+}
+
+#Products {
+  /* Menggunakan background image */
+  background-image: url("bg3.jpg");
+
+  /* Mengatur ukuran background */
+  background-size: 100% auto;
+
+  /* Mengatur cara pengulangan */
+  background-repeat: repeat-y;
+
+  /* Menghaluskan transisi antar gambar */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+
+  /* Untuk browser yang mendukung webkit */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+
+  /* Mengatur posisi background */
+  background-position: center;
+
+  /* Menambahkan padding bottom untuk area transisi */
+  padding-bottom: 50px;
+
+  /* Optional: menambahkan overlay gradient untuk transisi lebih halus */
+  position: relative;
+}
+
+/* Menambahkan overlay untuk transisi lebih halus */
+#Products::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%);
+  pointer-events: none;
+}
+
+/* Styling untuk section Order dengan background image */
+#Order {
+  background-image: url("bg3.jpg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: center;
+  position: relative;
+  padding: 40px 0;
+
+  /* Menambahkan mask untuk transisi halus */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Overlay untuk meningkatkan keterbacaan form */
+#Order::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+/* Memastikan konten berada di atas overlay */
+#Order .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling untuk form container */
+#Order form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk heading */
+#Order h2 {
+  color: #333;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Styling untuk form elements */
+#Order .form-control,
+#Order .form-select {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#Order .form-control:focus,
+#Order .form-select:focus {
+  background-color: #fff;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+/* Styling untuk button */
+#Order .btn-primary {
+  padding: 0.75rem 2rem;
+  background: #007bff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#Order .btn-primary:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #Order {
+    background-size: cover;
+  }
+
+  #Order form {
+    margin: 0 15px;
+    padding: 20px;
+  }
+}
+
+section {
+  padding-top: 5 rem;
+}
+.card-img-top {
+  width: 100%; /* Menyesuaikan dengan lebar kartu */
+  height: 350px; /* Tetapkan tinggi yang konsisten */
+  object-fit: cover; /* Menyesuaikan gambar agar tidak terdistorsi */
+}
+.navbar {
+  background-color: #785b47;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #785b47; /* Warna beige */
+  color: #ffffff; /* Warna teks agar kontras dengan latar */
+}
+
+footer i {
+  color: rgb(255, 255, 255); /* Warna ikon hati */
+}
+#About {
+  margin-top: 5rem;
+}
